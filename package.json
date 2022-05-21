@@ -1,0 +1,48 @@
+{
+  "version": "0.1.0",
+  "license": "MIT",
+  "main": "dist/index.js",
+  "typings": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "engines": {
+    "node": ">=10"
+  },
+  "scripts": {
+    "start": "tsdx watch",
+    "build": "tsdx build",
+    "lint": "tsdx lint",
+    "prepare": "tsdx build"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "tsdx lint"
+    }
+  },
+  "prettier": {
+    "printWidth": 80,
+    "semi": true,
+    "singleQuote": true,
+    "trailingComma": "es5"
+  },
+  "name": "@barbuza/vite-plugin-service-worker",
+  "author": {
+    "name": "Victor Kotseruba",
+    "email": "barbuzaster@gmail.com"
+  },
+  "module": "dist/vite-plugin-service-worker.esm.js",
+  "devDependencies": {
+    "husky": "^8.0.1",
+    "tsdx": "^0.14.1",
+    "tslib": "^2.4.0",
+    "typescript": "^4.6.4"
+  },
+  "dependencies": {
+    "@rollup/plugin-node-resolve": "^13.3.0",
+    "esbuild": "^0.14.39",
+    "rollup": "^2.74.1",
+    "rollup-plugin-esbuild": "^4.9.1",
+    "vite": "^2.9.9"
+  }
+}
