@@ -81,7 +81,7 @@ export function serviceWorkerPlugin(options?: {
           name: `${path.basename(filename, path.extname(filename))}.js`,
           source: code,
         });
-        return `export default "${this.getFileName(handle)}";`;
+        return `export default "__VITE_IMAGE_ASSET__${handle}__";`;
       }
       return;
     },
